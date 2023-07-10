@@ -47,7 +47,8 @@ namespace Document_Distance
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog.SelectedPath))
                 {
                     string path = folderBrowserDialog.SelectedPath.ToString();
-                    string fileName = "Palagarism Report.txt";
+                    string serial = DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("HHmmss");
+                    string fileName = "Palagarism Report" + serial + ".txt";
                     textBox1.Text = Path.Combine(path, fileName);
                 }
             }
